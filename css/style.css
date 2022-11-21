@@ -72,7 +72,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+:root {
+  --bg-color:#151A25;
+  --accent-colol:#D6377F;
+}
+
 body {
   font-family: "Satoshi-Variable";
   color: #FFFFFF;
+  background: var(--bg-color);
 }

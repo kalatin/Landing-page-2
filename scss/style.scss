@@ -1,9 +1,15 @@
 //----------ROOT------------
 @import 'RESET.scss';
-
 @import url('satoshi.css');
+
+:root {
+	--bg-color:#151A25;
+	--accent-colol:#D6377F;
+}
 
 body {
 	font-family: 'Satoshi-Variable';
 	color: #FFFFFF;
+	background: var(--bg-color);
 }
+
