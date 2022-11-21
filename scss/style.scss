@@ -1,2 +1,9 @@
 //----------ROOT------------
 @import 'RESET.scss';
+
+@import url('satoshi.css');
+
+body {
+	font-family: 'Satoshi-Variable';
+	color: #FFFFFF;
+}
