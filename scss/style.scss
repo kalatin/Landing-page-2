@@ -11,6 +11,11 @@ body {
 	font-family: 'Satoshi-Variable';
 	color: #FFFFFF;
 	background: var(--bg-color);
+	overflow: auto;
+}
+
+.noScroll {
+	overflow: hidden;
 }
 
 //------------HEADER---------------------
@@ -187,6 +192,7 @@ body {
 			background: rgba(0, 0, 0, 0.782);
 			height: 100%;
 			width: 400px;
+			padding-top: 60px;
 			li {
 				text-align: center;
 				
