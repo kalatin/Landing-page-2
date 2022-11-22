@@ -290,7 +290,10 @@ body {
   }
 }
 .hero {
-  padding: clamp(1.875rem, 1.375rem + 2.5vw, 3.25rem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 94vh;
 }
 .hero__container {
   margin: 0 auto;
@@ -300,28 +303,46 @@ body {
   position: relative;
 }
 .hero__circle-2 {
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
   position: absolute;
+  top: 50%;
+  left: -25%;
+  opacity: 0;
+  transform: translate(0, -50%);
   margin-left: 20px;
+  transition: 0.5s;
+}
+.hero__circle-2._anim-active {
+  opacity: 1;
+  left: 0;
 }
 .hero__circle05 {
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
   position: absolute;
+  top: 50%;
+  right: -25%;
+  transform: translate(0, -50%);
   margin-left: 20px;
   margin-bottom: 30px;
-  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.hero__circle05._anim-active {
+  opacity: 1;
+  right: 0;
 }
 .hero__body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  row-gap: 18px;
+  row-gap: clamp(1rem, 0.227rem + 3.86vw, 3.125rem);
   max-width: 916px;
   margin: 0 auto;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translate(0, 200px);
+}
+.hero__body._anim-active {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 .hero__title {
   font-family: "Satoshi-Bold";
@@ -359,7 +380,22 @@ body {
   border-radius: 50%;
   border: 1px dashed rgb(97, 232, 236);
   margin: clamp(2.5rem, 2.074rem + 2.13vw, 3.938rem) auto 0 auto;
+  transition: 0.8s;
+  opacity: 0;
+  transform: translate(0, -20px);
 }
+.hero__arrow-down img {
+  transition: 0.8s;
+  opacity: 0;
+}
+.hero__arrow-down._anim-active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.hero__arrow-down._anim-active img {
+  opacity: 1;
+}
+
 .meet {
   background: url("../image/me.png");
   background-size: 100% 100%;
@@ -378,12 +414,24 @@ body {
   font-family: "Satoshi-Bold";
   line-height: clamp(2.75rem, 1.935rem + 4.07vw, 5.5rem);
   color: #FFFFFF;
+  opacity: 0;
+  transition: 0.8s;
+}
+.meet__title._anim-active {
+  opacity: 1;
 }
 .meet__blocks {
   margin-top: clamp(2.5rem, 1.759rem + 3.7vw, 5rem);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 16px;
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.meet__blocks._anim-active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .meet__block {
   display: flex;
@@ -412,6 +460,9 @@ body {
     grid-row-gap: 15px;
   }
 }
+.about {
+  overflow: hidden;
+}
 .about__container {
   max-width: 1392px;
   margin: clamp(3.125rem, 1.718rem + 7.04vw, 7.875rem) auto;
@@ -435,7 +486,14 @@ body {
   z-index: -99;
 }
 .about__info {
+  transform: translate(-80%, 0);
   max-width: 650px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.about__info._anim-active {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 .about__title {
   font-family: "Satoshi-Bold";
@@ -508,6 +566,15 @@ body {
   display: flex;
   grid-column-gap: 24px;
   position: relative;
+  transform: translate(70%, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.about__images._anim-active {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 0);
 }
 .about__images-arrow {
   position: absolute;
