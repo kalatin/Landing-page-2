@@ -447,6 +447,7 @@ body {
   background: #151A25;
   opacity: 0.8;
   padding: clamp(1.875rem, 1.505rem + 1.85vw, 3.125rem) 0;
+  border-radius: 10px;
 }
 .meet__info {
   margin-top: 10px;
@@ -652,6 +653,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+.event__header._anim-active {
+  opacity: 1;
 }
 .event__header-img {
   position: absolute;
@@ -683,6 +689,10 @@ body {
   transition: 0.3s;
 }
 .event__button:hover {
+  background: var(--bg-color);
+  color: white;
+}
+.event__button.active-tab {
   background: var(--bg-color);
   color: white;
 }
@@ -808,4 +818,15 @@ body {
   .event__block-images {
     margin: 10px 0;
   }
+}
+._anim-show {
+  transform: translate(0, 120px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+._anim-show._anim-active,
+._anim-active ._anim-show {
+  opacity: 1;
+  transform: translate(0, 0);
 }
