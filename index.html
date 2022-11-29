@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 <body>
 	<!-----------------HEADER------------------>
@@ -219,27 +220,65 @@
 	<!-----------------SPEAKES------------------>
 	<div class="speakers">
 		<div class="speakers__container">
-			<div class="speakers__slider swiper">
+			<div class="speakers__swiper swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="image/speaker-1.png" alt=""></div>
-					<div class="swiper-slide"><img src="image/speaker-2.png" alt=""></div>
-					<div class="swiper-slide"><img src="image/speaker-3.png" alt=""></div>
-				</div>
+					<!-- Slides -->
+					<div class="swiper-slide speakers__slide">
+						<div class="speakers__slide-block">
+							<img src="image/speaker-1.png" alt="speaker">
+							<div class="speakers__slide-wrap">
+								<div class="speakers__slide-title">Brooklyn Simmons</div>
+								<div class="speakers__slide-text">Designer Manager, Google</div>
+								<div class="speakers__slide-logos">
+								<img src="icons/Facebook.svg" alt="logos"><img src="icons/instagram.svg" alt="logos"><img src="icons/linkedin.svg" alt="logos">
+							</div>	
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide speakers__slide">
+						<div class="speakers__slide-block">
+							<img src="image/speaker-2.png" alt="speaker">
+							<div class="speakers__slide-wrap">
+								<div class="speakers__slide-title">Brooklyn Simmons</div>
+								<div class="speakers__slide-text">Designer Manager, Google</div>
+								<div class="speakers__slide-logos">
+								<img src="icons/Facebook.svg" alt="logos"><img src="icons/instagram.svg" alt="logos"><img src="icons/linkedin.svg" alt="logos">
+							</div>	
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide speakers__slide">
+						<div class="speakers__slide-block">
+							<img src="image/speaker-3.png" alt="speaker">
+							<div class="speakers__slide-wrap">
+								<div class="speakers__slide-title">Brooklyn Simmons</div>
+								<div class="speakers__slide-text">Designer Manager, Google</div>
+								<div class="speakers__slide-logos">
+								<img src="icons/Facebook.svg" alt="logos"><img src="icons/instagram.svg" alt="logos"><img src="icons/linkedin.svg" alt="logos">
+							</div>	
+							</div>
+						</div>
+					</div>
+					
+				 </div>
 			</div>
 			<div class="speakers__block">
-				<div class="speakers__title">Meet with Graeter's Speakers</div>
+				<img src="icons/2-circle.svg" alt="circ">
+				<div class="speakers__title">Meet with
+					Graeter's Speakers</div>
 				<div class="speakers__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit quis dui lacus. Aenean purus ut ac sit. Nullam habitant at tempus ut. Enim turpis sollicitudin magna nunc facilisis odo.Lorem ipsum dolor sit amet, consectetur adipiscing 
 					sit quis dui lacus. Aenean purus ut ac sit.</div>
 				<button class="speakers__button">View All Speaker</button>
 				<div class="speakers__nav">
-					<div class="swiper-button-prev">DD</div>
-					<div class="swiper-button-next">SS</div>
+					<div class="swiper-button-prev"><img src="icons/slider-arrow.svg" alt=""></div> 
+					<div class="swiper-button-next"><img src="icons/slider-arrow.svg" alt=""></div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<script src="js/animation.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/blockBody.js"></script>
 	<script src="js/burger.js"></script>
 	<script src="js/tabs.js"></script>
