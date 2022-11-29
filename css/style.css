@@ -219,6 +219,10 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #FFFFFF;
+  transition: 0.3s;
+}
+.header__menu li a:hover {
+  text-shadow: -1px 1px 12px rgba(255, 255, 255, 0.627);
 }
 .header__menu li + li {
   margin-left: 24px;
@@ -240,6 +244,13 @@ body {
   line-height: 22px;
   letter-spacing: 0.01em;
   color: #FFFFFF;
+}
+.header__button:hover {
+  background: #952859;
+  color: rgb(224, 224, 224);
+}
+.header__button:hover svg path {
+  fill: rgb(224, 224, 224);
 }
 
 @media (max-width: 1150px) {
@@ -554,6 +565,7 @@ body {
 .about__button:first-child {
   border-radius: 5px;
   display: flex;
+  align-items: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
   background: var(--accent-color);
@@ -562,12 +574,24 @@ body {
 .about__button:first-child div {
   color: white;
 }
+.about__button:first-child:hover:hover {
+  background: #952859;
+  color: rgb(224, 224, 224);
+}
+.about__button:first-child:hover:hover svg path {
+  fill: rgb(224, 224, 224);
+}
 .about__button:last-child {
   border-radius: 5px;
   padding: 10px 20px;
   border: 1px solid white;
   background: var(--bg-color);
   color: white;
+  transition: 0.3s;
+}
+.about__button:last-child:hover {
+  background: white;
+  color: var(--bg-color);
 }
 .about__images {
   display: flex;
@@ -829,4 +853,45 @@ body {
 ._anim-active ._anim-show {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+.speakers__container {
+  max-width: 1292px;
+  padding: clamp(2.188rem, 1.354rem + 4.17vw, 5rem) 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr minmax(542px, auto);
+}
+.speakers__block {
+  max-width: 542px;
+}
+.speakers__title {
+  font-family: "Satoshi-Bold";
+  font-size: clamp(2.188rem, 1.71rem + 2.39vw, 3.5rem);
+  font-weight: 700;
+  line-height: clamp(3.438rem, 3.049rem + 1.94vw, 4.75rem);
+  letter-spacing: -0.03em;
+  color: white;
+}
+.speakers__text {
+  margin-top: clamp(0.5rem, 0.278rem + 1.11vw, 1.25rem);
+  font-size: clamp(0.875rem, 0.819rem + 0.28vw, 1.063rem);
+  line-height: 22px;
+  color: #FFFFFF;
+}
+.speakers__button {
+  margin-top: clamp(1.25rem, 0.886rem + 1.82vw, 2.25rem);
+  display: inline-block;
+  border-radius: 5px;
+  background: var(--bg-color);
+  padding: 10px 20px;
+  border: 1px solid var(--accent-color);
+  color: white;
+  transition: 0.2s;
+}
+.speakers__button:hover {
+  background: var(--accent-color);
+}
+.swiper-wrapper {
+  display: flex;
 }
