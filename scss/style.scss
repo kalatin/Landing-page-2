@@ -1717,7 +1717,7 @@ body {
 //---------------FOOTER--------------------
 
 .footer {
-
+	overflow: hidden;
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(2,1fr);
@@ -1845,7 +1845,7 @@ body {
 }
 
 .down {
-
+	overflow: hidden;
 	&__container {
 		max-width: 1120px;
 		margin: 0 auto;

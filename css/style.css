@@ -1585,6 +1585,9 @@ body {
     font-size: 24px;
   }
 }
+.footer {
+  overflow: hidden;
+}
 .footer__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1692,6 +1695,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+.down {
+  overflow: hidden;
 }
 .down__container {
   max-width: 1120px;
